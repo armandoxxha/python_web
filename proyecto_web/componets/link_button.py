@@ -2,7 +2,7 @@ import reflex as rx
 import proyecto_web.styles.styles as styles
 from proyecto_web.styles.styles import Spacer
 
-def link_button(title : str, body: str, url: str, image:str) -> rx.Component:
+def link_button(title : str, body: str, url: str, image:str, is_external=True) -> rx.Component:
     return rx.link(
         rx.button(
             rx.hstack(
@@ -25,7 +25,7 @@ def link_button(title : str, body: str, url: str, image:str) -> rx.Component:
             )
         ),
         href=url,
-        is_external=True,
+        is_external=is_external,
         width="100%"
     )
 

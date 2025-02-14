@@ -5,40 +5,22 @@ from proyecto_web.links.links import links
 from proyecto_web.componets.footer import footer
 import proyecto_web.styles.styles as styles
 from proyecto_web.views.sponsors.sponsors import sponsors
-class State(rx.State):
-    pass
-
-def index() -> rx.Component:
-
-    return rx.box(
-        navbar(),
-        rx.center(
-            rx.vstack(
-                headers(),
-                links(),
-                sponsors(),
-                max_width=styles.MAX_WIDTH,
-                width="100%",
-                margin_y=styles.Spacer.BIG.value,
-                padding=styles.Spacer.BIG.value
-
-            )
-        ),
-        
-        rx.center(
-            footer()
-        )
-    )
+from proyecto_web.pages.index import index
+from proyecto_web.pages.courses import courses
 
 app = rx.App(
     stylesheets=styles.STYLESSHEETS,
     style=styles.BASE_STYLE,
+    head_components=[
+        rx.script(src="https://www.googletamanager.com/gtag/js?id=GTM-T9CRRMN5"),
+        rx.script(
+            """
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'GTM-T9CRRMN5')
+"""
+        ),
+    ],
    
 )
-app.add_page(
-    index,
-    title="Armandoxx | Te enseño programación y desarrollo de software",
-    description="Hola, mi nombre es Armando Hidalgo. Soy docente de informática",
-    image="avatar1.jpg"
-    )
-app._compile()

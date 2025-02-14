@@ -8,7 +8,7 @@ def footer() -> rx.Component:
 
     return rx.vstack(
         rx.image(
-            src="logo.png",
+            src="/logo.png",
             width=Spacer.VERY_BIG.value,
             height=Spacer.VERY_BIG.value,
             alt="Logotipo de armando"
@@ -20,12 +20,23 @@ def footer() -> rx.Component:
             is_external=True,
             font_size=Spacer.MEDIUM.value
         ),
-        rx.text(
-            "V3.BUILDING SOFTWARE WITH ♥ FROM GALACIA TO THE WORLD",
-            font_size=Spacer.MEDIUM.value,
-            margin_top=Spacer.ZERO.value
-
-        ),
+        rx.link(
+            rx.hstack(
+                rx.image(
+                    src="/github-brands-solid.svg",
+                      width=Spacer.LARGE.value,
+                      height=Spacer.LARGE.value
+                ),
+                rx.text(
+                    "V3.BUILDING SOFTWARE WITH ♥ FROM GALACIA TO THE WORLD",
+                    font_size=Spacer.MEDIUM.value,
+                    margin_top=Spacer.ZERO.value
+                )
+            ),
+            href=const.CODIGO_PAGINA_WEB_GITHUB,
+            is_external=True
+        )
+        ,
         align="center",
         margin_botton=Spacer.BIG.value,
         padding_x=Spacer.BIG.value,

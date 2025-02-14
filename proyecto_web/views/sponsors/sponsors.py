@@ -14,16 +14,16 @@ def sponsors() -> rx.Component:
         title("Colaboran"),
         rx.flex(
             link_sponsor(
-                "LT.png",
+                "/LT.png",
                 const.LICEO_URL,
                 "LiceoTucurrique"
             ),
             link_sponsor(
-                "MEP.png",
+                "/MEP.png",
                 const.MEP_URL,
                 "MEP"
             ),
-            spacing='8',
+            spacing='9',
             columns=[1,2]
         ),
         width="100%",

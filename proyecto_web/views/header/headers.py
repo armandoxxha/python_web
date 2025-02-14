@@ -6,13 +6,13 @@ from proyecto_web.styles.styles import TextColor as TextColor
 from proyecto_web.styles.styles import Color as Color
 from proyecto_web.styles.styles import Spacer as Sparcer
 import proyecto_web.contants as const
-def headers() -> rx.Component:
+def headers(details = True) -> rx.Component:
 
     return rx.vstack(
         rx.hstack(
             rx.avatar(
                 name="Armando Hidalgo A",
-                src="avatar1.jpg",
+                src="/avatar1.jpg",
                 fallback="AH", size='7',
                 color=TextColor.BODY.value,
                 bg=Color.CONTENT.value,
@@ -34,17 +34,17 @@ def headers() -> rx.Component:
                 ),
                 rx.hstack(
                     link_icon(
-                        "twitch-brands-solid.svg",
+                        "/twitch-brands-solid.svg",
                         const.TWITCH_URL,
                         "Twitch"
                     ),
                     link_icon(
-                        "youtube-brands-solid.svg",
+                        "/youtube-brands-solid.svg",
                         const.YOUTUBE_URL,
                         "Youtube"
                     ),
                     link_icon(
-                        "github-brands-solid.svg",
+                        "/github-brands-solid.svg",
                         const.GIT_HUBPYTHONINICIAL_URL,
                         "github"
                     )
@@ -55,30 +55,37 @@ def headers() -> rx.Component:
             align="start",
             spacing='6'
         ),
-        rx.flex(
-            info_text("+9 ", "años de experiencia en docencia"),
-            rx.spacer(),
-            info_text("+2 ", "años de experiencia en Ciberseguridad"),
-            rx.spacer(),
-            info_text("+4 ", "años de experiencia Networking"),
-            width="100%"
+        rx.cond(
+            details,
+            rx.box(        
+                rx.flex(
+                    info_text("+9 ", "años de experiencia en docencia"),
+                    rx.spacer(),
+                    info_text("+2 ", "años de experiencia en Ciberseguridad"),
+                    rx.spacer(),
+                    info_text("+4 ", "años de experiencia Networking"),
+                    width="100%"
 
-        ),
-
-        rx.text(
-            "HOLA MI NOMBRE ES ARMANDO HIDALGO",
-            color = TextColor.HEADER.value, 
-            align="center"
-        ), 
-        rx.text(
-            f""" Soy un entusiasta de la programación de software. Actualmente trabajo como docente de informática.
-            La siguiente web recoge diferentes links de informacion correspondiente a mi área, espero te sirva""",
-            width="100%",
-            align="center",
-            font_size=Sparcer.MEDIUM.value,
-            color = TextColor.HEADER.value
+                ),
+                rx.text(
+                    "HOLA MI NOMBRE ES ARMANDO HIDALGO",
+                    color = TextColor.HEADER.value, 
+                    align="center"
+                ), 
+                rx.text(
+                    f"""Soy un entusiasta de la programación de software. Actualmente
+                    trabajo como docente de informática. La siguiente web recoge diferentes
+                    links de información correspondiente a mi área, espero te sirva""",
+                    width="100%",
+                    align="center",
+                    font_size=Sparcer.DEFAULT.value,
+                    color = TextColor.BODY.value
+                ),
+                width="100%"
+                
+            )
         ),
         align="center",
-        spacing='6'
-
+        spacing='9',
+        align_items="start"
     )
