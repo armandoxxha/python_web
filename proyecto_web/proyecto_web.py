@@ -8,6 +8,8 @@ from proyecto_web.views.sponsors.sponsors import sponsors
 from proyecto_web.pages.index import index
 from proyecto_web.pages.courses import courses
 
+class State(rx.State):
+    """Define your app state here"""
 app = rx.App(
     stylesheets=styles.STYLESSHEETS,
     style=styles.BASE_STYLE,
