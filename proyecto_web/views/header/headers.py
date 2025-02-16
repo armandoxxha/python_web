@@ -11,12 +11,6 @@ def headers(details = True, live = False) -> rx.Component:
     return rx.vstack(
         rx.hstack(
             rx.avatar(
-                rx.badge(
-                    size="3",
-                    variant="solid",
-                    color_scheme="green",
-                    radius="small"
-                ),
                 name="Armando Hidalgo A",
                 src="/avatar1.jpg",
                 fallback="AH", size='7',
