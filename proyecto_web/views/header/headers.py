@@ -6,11 +6,17 @@ from proyecto_web.styles.styles import TextColor as TextColor
 from proyecto_web.styles.styles import Color as Color
 from proyecto_web.styles.styles import Spacer as Sparcer
 import proyecto_web.contants as const
-def headers(details = True) -> rx.Component:
+def headers(details = True, live = False) -> rx.Component:
 
     return rx.vstack(
         rx.hstack(
             rx.avatar(
+                rx.badge(
+                    size="3",
+                    variant="solid",
+                    color_scheme="green",
+                    radius="small"
+                ),
                 name="Armando Hidalgo A",
                 src="/avatar1.jpg",
                 fallback="AH", size='7',
@@ -18,7 +24,8 @@ def headers(details = True) -> rx.Component:
                 bg=Color.CONTENT.value,
                 padding="2px",
                 border="4px",
-                border_color=Color.PRIMARY.value
+                border_color=Color.PRIMARY.value,
+                radius="full"
 
             ),
             rx.vstack(
@@ -45,7 +52,7 @@ def headers(details = True) -> rx.Component:
                     ),
                     link_icon(
                         "/github-brands-solid.svg",
-                        const.GIT_HUBPYTHONINICIAL_URL,
+                        const.GIT_HUB_URL,
                         "github"
                     )
                 ),

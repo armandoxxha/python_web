@@ -1,9 +1,9 @@
 #Comunidad
 
-TWITCH_URL="https://twitch.tv/mouredev"
+TWITCH_URL="https://www.twitch.tv/armandoxxlml"
 YOUTUBE_URL="https://www.youtube.com/channel/UCA0KwF2ohw5jXYGZipxaRLw"
-DISCORD_URL="https://discord.gg/mouredevtv"
-GIT_HUBPYTHONINICIAL_URL = "https://github.com/armandoxxha/python_inicial"
+DISCORD_URL=""
+GIT_HUB_URL = "https://github.com/armandoxxha"
 
 # Contactos
 
@@ -13,6 +13,8 @@ EMAIL = "innovaedutucu@gmail.com"
 # Recursos y más 
 
 CODEDEX_URL = "https://www.codedex.io/"
+DRIVE8_2025_URL = "https://drive.google.com/drive/folders/1vyIEpgQjG5x1v8yjdMnsKCqNw8SN-HDz?usp=sharing"
+DRIVE9_2025_URL = "https://drive.google.com/drive/folders/1wJvBx6VpeIJcgeRH7cjDSLD7ixrltBcy?usp=sharing"
 
 DRIVE7_2024_URL = "https://drive.google.com/drive/folders/1YmN6rnADIetqS1ioSCmx8ymke7wSDiJp?usp=drive_link"
 DRIVE8_2024_URL = "https://drive.google.com/drive/folders/1e0Aw9r0QD2wXsBtrgqDp0xwx9lB0CDqu?usp=drive_link"
@@ -25,7 +27,7 @@ CODIGO_PAGINA_WEB_GITHUB = "https://github.com/armandoxxha/python_web"
 #SPONSORS
 
 
-MEP_URL = "https://mep.go.cr"
+MEP_URL = "https://www.mep.go.cr/"
 LICEO_URL = "https://liceotucurrique.com"
 
 # Google analytics

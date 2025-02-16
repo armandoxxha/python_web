@@ -12,7 +12,7 @@ def links() -> rx.Component:
             "Cursos gratis",
             "Enlaces de cursos variados de programacion",
             Route.COURSES.value,
-            "/twitch-brands-solid.svg",
+            "/free-code-camp-brands-solid.svg",
             is_external=False
         ),
         link_button(
@@ -24,13 +24,13 @@ def links() -> rx.Component:
         link_button(
             "GITHUB Python Inicial Octavo",
             "Enlace a repositorio de github de octavo",
-            const.GIT_HUBPYTHONINICIAL_URL,
+            const.GIT_HUB_URL,
             "/github-brands-solid.svg"
         ),
         link_button(
             "GITHUB Python avanzado Noveno",
             "Enlace a repositorio de github de noveno",
-            const.GIT_HUBPYTHONINICIAL_URL,
+            const.GIT_HUB_URL,
             "/github-brands-solid.svg"
         ),
         title("Recursos y más"),
@@ -45,6 +45,18 @@ def links() -> rx.Component:
             "Mi listado de libros sobre programacion, ciencia y tecnologia",
             "https://youtube.com/@mouredev",
             "/book-solid.svg"
+        ),
+         link_button(
+            "Recursos 8 del 2025",
+            "Materiales vistos en clases en Octavo 2025",
+            const.DRIVE8_2025_URL,
+            "/google-drive-brands-solid.svg"
+        ),
+         link_button(
+            "Recursos 9 del 2025",
+            "Materiales vistos en clases en Noveno 2025",
+            const.DRIVE9_2025_URL,
+            "/google-drive-brands-solid.svg"
         ),
         link_button(
             "Recursos 7 del 2024",
