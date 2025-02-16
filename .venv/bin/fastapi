@@ -1,4 +1,4 @@
-#!/home/armandoxx/proyecto_web/.venv/bin/python3.12
+#!/home/runner/work/python_web/python_web/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
